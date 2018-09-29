@@ -103,9 +103,7 @@ public class MonorailForm extends JFrame {
 					e.printStackTrace();
 				}
 	            
-	            MonorailForm.this.repaint();
-	            //Draw();	            
-	            
+	            MonorailForm.this.repaint(); 
 			}
 		});
 		buttonCreate.setBounds(10, 11, 89, 42);
