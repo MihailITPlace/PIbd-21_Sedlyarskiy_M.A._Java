@@ -18,7 +18,7 @@ import javax.swing.SwingConstants;
 public class MonorailForm extends JFrame {
 
 	private JPanel contentPane;
-	private Monorail monorail;
+	private ITransport monorail;
 	/**
 	 * Launch the application.
 	 */
@@ -40,7 +40,7 @@ public class MonorailForm extends JFrame {
 		super.paint(g);
 		try {
 			if (monorail != null) {
-				monorail.drawMonorail(g);
+				monorail.Draw(g);
 			}
 		}
 		catch(Exception ex){
@@ -55,16 +55,16 @@ public class MonorailForm extends JFrame {
 			switch (name)
 			{
             	case "Up":
-            		monorail.moveMonorail(Direction.Up);
+            		monorail.MoveTransport(Direction.Up);
             		break;
             	case "Down":
-            		monorail.moveMonorail(Direction.Down);
+            		monorail.MoveTransport(Direction.Down);
             		break;
             	case "Left":
-            		monorail.moveMonorail(Direction.Left);
+            		monorail.MoveTransport(Direction.Left);
             		break;
             	case "Right":
-            		monorail.moveMonorail(Direction.Right);
+            		monorail.MoveTransport(Direction.Right);
             		break;
 			}
 			this.repaint();
@@ -86,29 +86,51 @@ public class MonorailForm extends JFrame {
 		contentPane.setLayout(null);
 					
 		
-		JButton buttonCreate = new JButton("\u0421\u043E\u0437\u0434\u0430\u0442\u044C");
+		JButton buttonCreate = new JButton("Создать наследника");
 		buttonCreate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {				
 	            try {
-					monorail = new Monorail(100 + (int) (Math.random() * 300), 1000 + (int) (Math.random() * 2000), Color.CYAN, Color.GRAY, true, true);
+					monorail = new Monorail(100 + (int) (Math.random() * 300), 1000 + (int) (Math.random() * 2000), Color.CYAN, Color.GRAY, true, true, true, 1000);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 	            
 	            try {
-					monorail.setPosition(70 + (int) (Math.random() * 160), 70 + (int) (Math.random() * 160), MonorailForm.this.getWidth(), MonorailForm.this.getHeight());					
+					monorail.SetPosition(70 + (int) (Math.random() * 160), 70 + (int) (Math.random() * 160), MonorailForm.this.getWidth(), MonorailForm.this.getHeight());					
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 	            
-	            MonorailForm.this.repaint(); 
+	            MonorailForm.this.repaint();
 			}
 		});
-		buttonCreate.setBounds(10, 11, 89, 42);
+		buttonCreate.setBounds(10, 11, 150, 42);
 		contentPane.add(buttonCreate);		
 		
+		JButton buttonCreateBase = new JButton("Создать базовый");
+		buttonCreateBase.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {				
+	            try {
+					monorail = new ElectricLocomotive(100 + (int) (Math.random() * 300), 1000 + (int) (Math.random() * 2000), Color.CYAN);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	            
+	            try {
+					monorail.SetPosition(70 + (int) (Math.random() * 160), 70 + (int) (Math.random() * 160), MonorailForm.this.getWidth(), MonorailForm.this.getHeight());					
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	            
+	            MonorailForm.this.repaint();
+			}
+		});
+		buttonCreateBase.setBounds(170, 11, 150, 42);
+		contentPane.add(buttonCreateBase);			
 		
 		JButton buttonUp = new JButton("");
 		buttonUp.setToolTipText("Up");
