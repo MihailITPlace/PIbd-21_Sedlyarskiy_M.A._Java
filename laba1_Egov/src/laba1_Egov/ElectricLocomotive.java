@@ -17,13 +17,13 @@ public class ElectricLocomotive extends Locomotive{
     
 	@Override
 	public void Draw(Graphics g) {        
-        //корпус
+
     	g.setColor(Color.black);    	
         g.drawLine((int)_startPosX, (int)_startPosY, (int)_startPosX + 70, (int)_startPosY);
         g.drawLine((int)_startPosX, (int)_startPosY, (int)_startPosX, (int)_startPosY + 50);
         g.drawLine((int)_startPosX, (int)_startPosY + 50, (int)_startPosX + 90, (int)_startPosY + 50);
         g.drawLine((int)_startPosX, (int)_startPosY + 45, (int)_startPosX + 90, (int)_startPosY + 45);
-        //лобовое стекло
+
         g.drawArc((int)_startPosX + 50, (int)_startPosY, 40, 100, 90, -90);
         
         g.setColor(getMainColor());
@@ -40,28 +40,27 @@ public class ElectricLocomotive extends Locomotive{
 		float step = getMaxSpeed() * 100 / getWeight();
         switch (direction)
         {
-            // вправо
             case Right:
                 if (_startPosX + step < _pictureWidth - monorailWidth)
                 {
                     _startPosX += step;
                 }
                 break;
-            //влево
+
             case Left:
                 if (_startPosX - step > 0)
                 {
                     _startPosX -= step;
                 }
                 break;
-            //вверх
+
             case Up:
                 if (_startPosY - step > 0)
                 {
                     _startPosY -= step;
                 }
                 break;
-            //вниз
+
             case Down:
                 if (_startPosY + step < _pictureHeight - monorailHeight)
                 {
