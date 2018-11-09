@@ -5,6 +5,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 public class FormDepot extends JFrame {
 
@@ -12,7 +14,9 @@ public class FormDepot extends JFrame {
     private JTextField textField;
 
     private ITransport transport;
-    private Depot<ITransport> depot;
+    private MultiLevelDepot depot;
+
+    private final int countLevel = 5;
     /**
      * Launch the application.
      */
@@ -44,8 +48,29 @@ public class FormDepot extends JFrame {
         panelDepot.setBounds(10, 11, 608, 398);
         contentPane.add(panelDepot);
 
-        depot = new Depot<ITransport>(15, panelDepot.getWidth(), panelDepot.getHeight());
+        DefaultListModel listModel = new DefaultListModel();
+        for (int i = 0; i < countLevel; i++) {
+            listModel.addElement("\u0423\u0440\u043E\u0432\u0435\u043D\u044C " + Integer.toString(i + 1));
+        }
+
+        JList list = new JList(listModel);
+        list.setBounds(648, 11, 206, 107);
+        contentPane.add(list);
+        list.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        list.setSelectedIndex(0);
+
+        ListSelectionListener listSelectionListener = new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                //panelDepot.setList(list);
+                panelDepot.repaint();
+            }
+        };
+        list.addListSelectionListener(listSelectionListener);
+
+        depot = new MultiLevelDepot(countLevel, panelDepot.getWidth(), panelDepot.getHeight());
         panelDepot.setDepot(depot);
+        panelDepot.setList(list);
 
         JButton buttonSetElectricLocomotive = new JButton("\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043C\u043E\u043D\u043E\u0440\u0435\u043B\u044C\u0441");
         buttonSetElectricLocomotive.addActionListener(new ActionListener() {
@@ -55,11 +80,15 @@ public class FormDepot extends JFrame {
                 transport = new Monorail(100 + (int) (Math.random() * 300), 1000 +
                         (int) (Math.random() * 2000), firstColor, secondColor, true,
                         true, true, 1000);
-                depot.addTransport(transport);
+                int place = depot.getAt(list.getSelectedIndex()).addTransport(transport);
+                if (place == -1) {
+                    JOptionPane.showMessageDialog(null, "Нет свободных мест");
+                }
+
                 panelDepot.repaint();
             }
         });
-        buttonSetElectricLocomotive.setBounds(648, 21, 206, 68);
+        buttonSetElectricLocomotive.setBounds(648, 181, 206, 40);
         contentPane.add(buttonSetElectricLocomotive);
 
         JButton buttonSetMonorail = new JButton("\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043B\u043E\u043A\u043E\u043C\u043E\u0442\u0438\u0432");
@@ -68,29 +97,37 @@ public class FormDepot extends JFrame {
                 Color firstColor = JColorChooser.showDialog(null, "Choose a Color", Color.WHITE);
                 transport = new ElectricLocomotive(100 + (int) (Math.random() * 300), 1000 +
                         (int) (Math.random() * 2000), firstColor);
-                depot.addTransport(transport);
+
+                int place = depot.getAt(list.getSelectedIndex()).addTransport(transport);
+                if (place == -1) {
+                    JOptionPane.showMessageDialog(null, "Нет свободных мест");
+                }
                 panelDepot.repaint();
             }
         });
-        buttonSetMonorail.setBounds(648, 100, 206, 68);
+        buttonSetMonorail.setBounds(648, 130, 206, 40);
         contentPane.add(buttonSetMonorail);
 
         JPanel panelGroupElements = new JPanel();
-        panelGroupElements.setBounds(648, 204, 206, 205);
+        panelGroupElements.setBounds(648, 232, 206, 177);
         contentPane.add(panelGroupElements);
         panelGroupElements.setLayout(null);
 
         JLabel lblNewLabel = new JLabel("\u041C\u0435\u0441\u0442\u043E");
-        lblNewLabel.setBounds(10, 14, 40, 14);
+        lblNewLabel.setBounds(10, 14, 31, 14);
         panelGroupElements.add(lblNewLabel);
 
         JPanelDraw panelTakeTrain = new JPanelDraw();
-        panelTakeTrain.setBounds(10, 72, 186, 122);
+        panelTakeTrain.setBounds(10, 73, 186, 93);
         panelGroupElements.add(panelTakeTrain);
 
         JButton buttonTakeTrain = new JButton("\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u0441\u043E\u0441\u0442\u0430\u0432");
         buttonTakeTrain.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
+                if (list.getSelectedIndex() == -1) {
+                    return;
+                }
+
                 int numberOfPlace = 0;
                 try {
                     numberOfPlace = Integer.parseInt(textField.getText());
@@ -100,13 +137,13 @@ public class FormDepot extends JFrame {
                     return;
                 }
 
-                if (numberOfPlace >= depot._places.size() || numberOfPlace < 0)
+                if (numberOfPlace >= depot.getAt(list.getSelectedIndex())._places.size() || numberOfPlace < 0)
                 {
                     textField.setText("Invalid input");
                     return;
                 }
 
-                transport = depot.removeTransport(numberOfPlace);
+                transport = depot.getAt(list.getSelectedIndex()).removeTransport(numberOfPlace);
                 if (transport != null) {
                     transport.SetPosition(5, 5, panelTakeTrain.getWidth(), panelTakeTrain.getHeight());
                 }
@@ -116,7 +153,7 @@ public class FormDepot extends JFrame {
                 panelDepot.repaint();
             }
         });
-        buttonTakeTrain.setBounds(10, 39, 186, 23);
+        buttonTakeTrain.setBounds(20, 39, 176, 23);
         panelGroupElements.add(buttonTakeTrain);
 
         textField = new JTextField();

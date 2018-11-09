@@ -76,7 +76,7 @@ public class Monorail extends ElectricLocomotive{
     	
         if (getBackSpoiler())
         {
-        	g.setColor(Color.black);
+        	g.setColor(__AddColor);
             g.fillRect((int)_startPosX, (int)_startPosY, 5, 50);
             g.drawRect((int)_startPosX, (int)_startPosY, 5, 50);
         }

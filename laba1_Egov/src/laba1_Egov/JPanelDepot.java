@@ -4,11 +4,16 @@ import javax.swing.*;
 import java.awt.*;
 
 public class JPanelDepot extends JPanel {
-    private Depot<ITransport> depot;
+    private MultiLevelDepot depot;
+    private JList list;
 
-    public void setDepot(Depot depot)
+    public void setDepot(MultiLevelDepot depot)
     {
         this.depot = depot;
+    }
+    public void setList(JList list)
+    {
+        this.list = list;
     }
 
     @Override
@@ -17,7 +22,9 @@ public class JPanelDepot extends JPanel {
         super.paint(g);
         try {
             if (depot != null) {
-                depot.Draw(g);
+                if (list.getSelectedIndex() != -1 ) {
+                    depot.getAt(list.getSelectedIndex()).Draw(g);
+                }
             }
         }
         catch(Exception ex){

@@ -1,11 +1,11 @@
 package laba1_Egov;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.awt.Color;
 import java.awt.Graphics;
 
 public class Depot<T extends ITransport> {
-    ArrayList<T> _places;
+    HashMap<Integer, T> _places;
 
     private int _pictureWidth;
 
@@ -15,21 +15,25 @@ public class Depot<T extends ITransport> {
 
     private int _placeSizeHeight = 80;
 
+    private int _maxCount;
+
     public Depot(int size, int pictureWidth, int pictureHeight) {
-        _places = new ArrayList<T>(size);
+        _maxCount = size;
+        _places = new HashMap<Integer, T>(size);
         this._pictureWidth = pictureWidth;
         this._pictureHeight = pictureHeight;
-        for (int i = 0; i < size; i++) {
-            _places.add(null);
-        }
     }
 
     public int addTransport(T transport) {
-        for (int i = 0; i < _places.size(); i++) {
+        if (_places.size() == _maxCount) {
+            return -1;
+        }
+
+        for (int i = 0; i < _maxCount; i++) {
             if (checkFreePlace(i)) {
-                _places.add(i, transport);
-                _places.get(i).SetPosition(10 + i / 5 * _placeSizeWidth + 5, i
-                        % 5 * _placeSizeHeight + 15, _pictureWidth, _pictureHeight);
+                _places.put(i, transport);
+                _places.get(i).SetPosition(10 + i / 5 * _placeSizeWidth + 5,
+                        i % 5 * _placeSizeHeight + 15, _pictureWidth, _pictureHeight);
 
                 return i;
             }
@@ -38,36 +42,32 @@ public class Depot<T extends ITransport> {
     }
 
     public T removeTransport(int index) {
-        if (index < 0 || index > _places.size()) {
-            return null;
-        }
-        if (!checkFreePlace(index)) {
-            T ship = _places.get(index);
-            _places.set(index, null);
-            return ship;
+        if (!checkFreePlace(index))
+        {
+            T train = _places.get(index);
+            _places.remove(index);
+            return train;
         }
         return null;
     }
 
     private boolean checkFreePlace(int index) {
-        return _places.get(index) == null;
+        return !_places.containsKey(index);
     }
 
     public void Draw(Graphics g) {
         DrawMarking(g);
-        for (int i = 0; i < _places.size(); i++) {
-            if (!checkFreePlace(i)) {
-                _places.get(i).Draw(g);
-            }
+        for (T i: _places.values()) {
+            i.Draw(g);
         }
     }
 
     private  void DrawMarking(Graphics g)
     {
         g.setColor(Color.BLACK);
-        g.drawRect(0, 0, (_places.size() / 5) * _placeSizeWidth, 480);
+        g.drawRect(0, 0, (_maxCount / 5) * _placeSizeWidth, 480);
 
-        for (int i = 0; i < _places.size() / 5; i++)
+        for (int i = 0; i < _maxCount / 5; i++)
         {
             for (int j = 0; j < 6; ++j)
             {
