@@ -95,4 +95,6 @@ public class Monorail extends ElectricLocomotive{
             g.drawRect((int)_startPosX + 70, (int)_startPosY + 45, 20, 5);
         }
     }
+
+
 }

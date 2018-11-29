@@ -10,13 +10,17 @@ import javax.swing.event.ListSelectionListener;
 
 public class FormDepot extends JFrame {
 
+    JFrame frame;
     private JPanel contentPane;
     private JTextField textField;
+    private static JList list;
 
     private ITransport transport;
     private MultiLevelDepot depot;
 
     private final int countLevel = 5;
+
+    private FormTrainConfig select;
     /**
      * Launch the application.
      */
@@ -36,6 +40,19 @@ public class FormDepot extends JFrame {
     /**
      * Create the frame.
      */
+
+    public void getTrain() {
+        select = new FormTrainConfig(frame);
+        if (select.res()) {
+            ITransport train = select.train;
+            int place = depot.getAt(list.getSelectedIndex()).addTransport(train);
+            if (place < 0) {
+                JOptionPane.showMessageDialog(null, "No free place");
+            }
+            //contentPane.repaint();
+        }
+    }
+
     public FormDepot() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 900, 458);
@@ -53,7 +70,7 @@ public class FormDepot extends JFrame {
             listModel.addElement("\u0423\u0440\u043E\u0432\u0435\u043D\u044C " + Integer.toString(i + 1));
         }
 
-        JList list = new JList(listModel);
+        list = new JList(listModel);
         list.setBounds(648, 11, 206, 107);
         contentPane.add(list);
         list.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
@@ -72,7 +89,7 @@ public class FormDepot extends JFrame {
         panelDepot.setDepot(depot);
         panelDepot.setList(list);
 
-        JButton buttonSetElectricLocomotive = new JButton("\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043C\u043E\u043D\u043E\u0440\u0435\u043B\u044C\u0441");
+        /*JButton buttonSetElectricLocomotive = new JButton("\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043C\u043E\u043D\u043E\u0440\u0435\u043B\u044C\u0441");
         buttonSetElectricLocomotive.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 Color firstColor = JColorChooser.showDialog(null, "Choose a Color", Color.WHITE);
@@ -89,9 +106,17 @@ public class FormDepot extends JFrame {
             }
         });
         buttonSetElectricLocomotive.setBounds(648, 181, 206, 40);
-        contentPane.add(buttonSetElectricLocomotive);
-
-        JButton buttonSetMonorail = new JButton("\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043B\u043E\u043A\u043E\u043C\u043E\u0442\u0438\u0432");
+        contentPane.add(buttonSetElectricLocomotive);*/
+        JButton buttonAddTrain = new JButton("Add train");
+        buttonAddTrain.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                getTrain();
+                panelDepot.repaint();
+            }
+        });
+        buttonAddTrain.setBounds(648, 130, 206, 70);
+        contentPane.add(buttonAddTrain);
+        /*JButton buttonSetMonorail = new JButton("\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043B\u043E\u043A\u043E\u043C\u043E\u0442\u0438\u0432");
         buttonSetMonorail.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 Color firstColor = JColorChooser.showDialog(null, "Choose a Color", Color.WHITE);
@@ -106,7 +131,7 @@ public class FormDepot extends JFrame {
             }
         });
         buttonSetMonorail.setBounds(648, 130, 206, 40);
-        contentPane.add(buttonSetMonorail);
+        contentPane.add(buttonSetMonorail);*/
 
         JPanel panelGroupElements = new JPanel();
         panelGroupElements.setBounds(648, 232, 206, 177);
