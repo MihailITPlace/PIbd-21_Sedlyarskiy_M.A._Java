@@ -49,7 +49,6 @@ public class FormDepot extends JFrame {
             if (place < 0) {
                 JOptionPane.showMessageDialog(null, "No free place");
             }
-            //contentPane.repaint();
         }
     }
 
@@ -89,24 +88,6 @@ public class FormDepot extends JFrame {
         panelDepot.setDepot(depot);
         panelDepot.setList(list);
 
-        /*JButton buttonSetElectricLocomotive = new JButton("\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043C\u043E\u043D\u043E\u0440\u0435\u043B\u044C\u0441");
-        buttonSetElectricLocomotive.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                Color firstColor = JColorChooser.showDialog(null, "Choose a Color", Color.WHITE);
-                Color secondColor = JColorChooser.showDialog(null, "Choose a Color", Color.WHITE);
-                transport = new Monorail(100 + (int) (Math.random() * 300), 1000 +
-                        (int) (Math.random() * 2000), firstColor, secondColor, true,
-                        true, true, 1000);
-                int place = depot.getAt(list.getSelectedIndex()).addTransport(transport);
-                if (place == -1) {
-                    JOptionPane.showMessageDialog(null, "Нет свободных мест");
-                }
-
-                panelDepot.repaint();
-            }
-        });
-        buttonSetElectricLocomotive.setBounds(648, 181, 206, 40);
-        contentPane.add(buttonSetElectricLocomotive);*/
         JButton buttonAddTrain = new JButton("Add train");
         buttonAddTrain.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
@@ -116,22 +97,6 @@ public class FormDepot extends JFrame {
         });
         buttonAddTrain.setBounds(648, 130, 206, 70);
         contentPane.add(buttonAddTrain);
-        /*JButton buttonSetMonorail = new JButton("\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043B\u043E\u043A\u043E\u043C\u043E\u0442\u0438\u0432");
-        buttonSetMonorail.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                Color firstColor = JColorChooser.showDialog(null, "Choose a Color", Color.WHITE);
-                transport = new ElectricLocomotive(100 + (int) (Math.random() * 300), 1000 +
-                        (int) (Math.random() * 2000), firstColor);
-
-                int place = depot.getAt(list.getSelectedIndex()).addTransport(transport);
-                if (place == -1) {
-                    JOptionPane.showMessageDialog(null, "Нет свободных мест");
-                }
-                panelDepot.repaint();
-            }
-        });
-        buttonSetMonorail.setBounds(648, 130, 206, 40);
-        contentPane.add(buttonSetMonorail);*/
 
         JPanel panelGroupElements = new JPanel();
         panelGroupElements.setBounds(648, 232, 206, 177);

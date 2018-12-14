@@ -25,18 +25,6 @@ public class FormTrainConfig extends JDialog {
     /**
      * Launch the application.
      */
-    /*public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    FormTrainConfig frame = new FormTrainConfig();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }*/
 
     /**
      * Create the frame.
@@ -80,7 +68,7 @@ public class FormTrainConfig extends JDialog {
 
     public FormTrainConfig(JFrame parent) {
         super(parent, true);
-        
+
         this.getContentPane().setBackground(SystemColor.controlHighlight);
         this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 
@@ -133,7 +121,6 @@ public class FormTrainConfig extends JDialog {
         JPanel panel = new JPanel();
         panel.setBounds(1, 1, 155, 121);
 
-       // panel.setBorder(solidBorder);
         FlowLayout flowLayout = (FlowLayout) panel.getLayout();
         panel.setDropTarget(new DropTarget() {
             public void drop(DropTargetDropEvent e) {
