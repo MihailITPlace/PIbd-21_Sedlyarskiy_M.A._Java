@@ -127,15 +127,11 @@ public class FormTrainConfig extends JDialog {
                 try {
                     for (DataFlavor df : e.getTransferable().getTransferDataFlavors()) {
                         String str = (String)e.getTransferable().getTransferData(df);
-                        if (e.getTransferable().getTransferData(df) == "Electric Locomotive") {
-                            /*tank = new LightTank(100 + (int) (Math.random() * 300), 1000 + (int) (Math.random() * 2000),
-                                    Color.WHITE);*/
+                        if (e.getTransferable().getTransferData(df) == "Electric Locomotive") {                            
                             train = new ElectricLocomotive(100, 100, Color.WHITE);
                         } else if (e.getTransferable().getTransferData(df) == "Monorail") {
                             train = new Monorail(100, 100, Color.WHITE, Color.BLACK,
-                                    true, true, true, 150);
-                            /*tank = new HeavyTank(100 + (int) (Math.random() * 300), 1000 + (int) (Math.random() * 2000),
-                                    Color.WHITE, Color.BLACK, true, true);*/
+                                    true, true, true, 150);                            
                         }
                         draw(panel, train);
                     }
