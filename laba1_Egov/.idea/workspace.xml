@@ -15,27 +15,53 @@
       <file leaf-file-name="FormDepot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/laba1_Egov/FormDepot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-284">
-              <caret line="50" column="13" lean-forward="false" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+            <state relative-caret-position="490">
+              <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#FormDepot#0;class#FormDepot#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormTrainConfig.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ElectricLocomotive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/laba1_Egov/ElectricLocomotive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="50" />
+              <folding>
+                <element signature="method#Draw#0;class#ElectricLocomotive#0" expanded="false" />
+                <element signature="method#MoveTransport#0;class#ElectricLocomotive#0" expanded="false" />
+                <element signature="e#2567#2568#0" expanded="true" />
+                <element signature="e#2646#2647#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Monorail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/laba1_Egov/Monorail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="73" column="4" lean-forward="false" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+              <folding>
+                <element signature="method#Monorail#0;class#Monorail#0" expanded="false" />
+                <element signature="method#Monorail#1;class#Monorail#0" expanded="false" />
+                <element signature="method#Draw#0;class#Monorail#0" expanded="false" />
+                <element signature="method#toString#0;class#Monorail#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormTrainConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/laba1_Egov/FormTrainConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-969">
+            <state relative-caret-position="17">
               <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#3910:5812" expanded="false" />
-                <element signature="method#mouseClicked#0;class#9156:10088" expanded="false" />
-                <element signature="method#mouseEntered#0;class#9156:10088" expanded="false" />
-                <element signature="method#mouseExited#0;class#9156:10088" expanded="false" />
-                <element signature="method#mouseReleased#0;class#9156:10088" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -44,9 +70,28 @@
       <file leaf-file-name="MultiLevelDepot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/laba1_Egov/MultiLevelDepot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="102">
+              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Depot.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/laba1_Egov/Depot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Depot#0;class#Depot#0" expanded="false" />
+                <element signature="method#addTransport#0;class#Depot#0" expanded="false" />
+                <element signature="method#removeTransport#0;class#Depot#0" expanded="false" />
+                <element signature="method#Draw#0;class#Depot#0" expanded="false" />
+                <element signature="method#DrawMarking#0;class#Depot#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,13 +127,13 @@
         <option value="$PROJECT_DIR$/src/laba1_Egov/JPanelDraw.java" />
         <option value="$PROJECT_DIR$/src/laba1_Egov/MonorailForm.java" />
         <option value="$PROJECT_DIR$/src/laba1_Egov/JPanelDepot.java" />
-        <option value="$PROJECT_DIR$/src/laba1_Egov/MultiLevelDepot.java" />
         <option value="$PROJECT_DIR$/src/laba1_Egov/Depot.java" />
-        <option value="$PROJECT_DIR$/src/laba1_Egov/ElectricLocomotive.java" />
         <option value="$PROJECT_DIR$/src/laba1_Egov/ITransport.java" />
-        <option value="$PROJECT_DIR$/src/laba1_Egov/Monorail.java" />
         <option value="$PROJECT_DIR$/src/laba1_Egov/FormDepot.java" />
         <option value="$PROJECT_DIR$/src/laba1_Egov/FormTrainConfig.java" />
+        <option value="$PROJECT_DIR$/src/laba1_Egov/ElectricLocomotive.java" />
+        <option value="$PROJECT_DIR$/src/laba1_Egov/Monorail.java" />
+        <option value="$PROJECT_DIR$/src/laba1_Egov/MultiLevelDepot.java" />
       </list>
     </option>
   </component>
@@ -132,8 +177,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,8 +202,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,7 +446,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -412,7 +457,9 @@
           <caret line="76" column="29" lean-forward="false" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
           <folding>
             <element signature="method#Monorail#0;class#Monorail#0" expanded="false" />
+            <element signature="method#Monorail#1;class#Monorail#0" expanded="false" />
             <element signature="method#Draw#0;class#Monorail#0" expanded="false" />
+            <element signature="method#toString#0;class#Monorail#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -431,7 +478,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -441,11 +490,6 @@
           <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#3910:5812" expanded="false" />
-            <element signature="method#mouseClicked#0;class#9156:10088" expanded="false" />
-            <element signature="method#mouseEntered#0;class#9156:10088" expanded="false" />
-            <element signature="method#mouseExited#0;class#9156:10088" expanded="false" />
-            <element signature="method#mouseReleased#0;class#9156:10088" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -456,6 +500,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#FormDepot#0;class#FormDepot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -487,7 +532,9 @@
           <caret line="76" column="29" lean-forward="false" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
           <folding>
             <element signature="method#Monorail#0;class#Monorail#0" expanded="false" />
+            <element signature="method#Monorail#1;class#Monorail#0" expanded="false" />
             <element signature="method#Draw#0;class#Monorail#0" expanded="false" />
+            <element signature="method#toString#0;class#Monorail#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -506,7 +553,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -516,6 +565,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#FormDepot#0;class#FormDepot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -533,6 +583,7 @@
           <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#FormDepot#0;class#FormDepot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -543,7 +594,9 @@
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="method#Monorail#0;class#Monorail#0" expanded="false" />
+            <element signature="method#Monorail#1;class#Monorail#0" expanded="false" />
             <element signature="method#Draw#0;class#Monorail#0" expanded="false" />
+            <element signature="method#toString#0;class#Monorail#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -561,6 +614,7 @@
           <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#FormDepot#0;class#FormDepot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -571,7 +625,9 @@
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="method#Monorail#0;class#Monorail#0" expanded="false" />
+            <element signature="method#Monorail#1;class#Monorail#0" expanded="false" />
             <element signature="method#Draw#0;class#Monorail#0" expanded="false" />
+            <element signature="method#toString#0;class#Monorail#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -589,6 +645,7 @@
           <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#FormDepot#0;class#FormDepot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -599,7 +656,9 @@
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="method#Monorail#0;class#Monorail#0" expanded="false" />
+            <element signature="method#Monorail#1;class#Monorail#0" expanded="false" />
             <element signature="method#Draw#0;class#Monorail#0" expanded="false" />
+            <element signature="method#toString#0;class#Monorail#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -617,6 +676,7 @@
           <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#FormDepot#0;class#FormDepot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -627,7 +687,9 @@
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="method#Monorail#0;class#Monorail#0" expanded="false" />
+            <element signature="method#Monorail#1;class#Monorail#0" expanded="false" />
             <element signature="method#Draw#0;class#Monorail#0" expanded="false" />
+            <element signature="method#toString#0;class#Monorail#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -652,6 +714,7 @@
           <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#FormDepot#0;class#FormDepot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -754,39 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/Depot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/Monorail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="method#Monorail#0;class#Monorail#0" expanded="false" />
-            <element signature="method#Draw#0;class#Monorail#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/ElectricLocomotive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="31" />
-          <folding>
-            <element signature="method#ElectricLocomotive#0;class#ElectricLocomotive#0" expanded="false" />
-            <element signature="method#Draw#0;class#ElectricLocomotive#0" expanded="false" />
-            <element signature="method#MoveTransport#0;class#ElectricLocomotive#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/laba1_Egov/ITransport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -815,35 +845,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/MultiLevelDepot.java">
+    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/FormTrainConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/FormDepot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-284">
-          <caret line="50" column="13" lean-forward="false" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        <state relative-caret-position="17">
+          <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/FormTrainConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/FormDepot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
-          <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+        <state relative-caret-position="490">
+          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#3910:5812" expanded="false" />
-            <element signature="method#mouseClicked#0;class#9156:10088" expanded="false" />
-            <element signature="method#mouseEntered#0;class#9156:10088" expanded="false" />
-            <element signature="method#mouseExited#0;class#9156:10088" expanded="false" />
-            <element signature="method#mouseReleased#0;class#9156:10088" expanded="false" />
+            <element signature="method#FormDepot#0;class#FormDepot#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/ElectricLocomotive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="50" />
+          <folding>
+            <element signature="method#Draw#0;class#ElectricLocomotive#0" expanded="false" />
+            <element signature="method#MoveTransport#0;class#ElectricLocomotive#0" expanded="false" />
+            <element signature="e#2567#2568#0" expanded="true" />
+            <element signature="e#2646#2647#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/Monorail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="73" column="4" lean-forward="false" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+          <folding>
+            <element signature="method#Monorail#0;class#Monorail#0" expanded="false" />
+            <element signature="method#Monorail#1;class#Monorail#0" expanded="false" />
+            <element signature="method#Draw#0;class#Monorail#0" expanded="false" />
+            <element signature="method#toString#0;class#Monorail#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/MultiLevelDepot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/laba1_Egov/Depot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Depot#0;class#Depot#0" expanded="false" />
+            <element signature="method#addTransport#0;class#Depot#0" expanded="false" />
+            <element signature="method#removeTransport#0;class#Depot#0" expanded="false" />
+            <element signature="method#Draw#0;class#Depot#0" expanded="false" />
+            <element signature="method#DrawMarking#0;class#Depot#0" expanded="false" />
           </folding>
         </state>
       </provider>

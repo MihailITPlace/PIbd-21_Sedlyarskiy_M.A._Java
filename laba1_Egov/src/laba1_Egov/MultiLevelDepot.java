@@ -1,6 +1,7 @@
 package laba1_Egov;
 
 import java.util.ArrayList;
+import java.io.*;
 
 public class MultiLevelDepot {
     ArrayList<Depot<ITransport>> depotStages;
@@ -21,5 +22,38 @@ public class MultiLevelDepot {
         }
 
         return null;
+    }
+
+    public boolean SaveData(String fileName)
+    {
+        try(FileWriter fr = new FileWriter(fileName)) {
+            fr.write("CountLeveles:" + depotStages.size() + "\n");
+            for (Depot level: depotStages) {
+
+                fr.write("Level" + "\n");
+                for (int i = 0; i < countPlaces; i++)
+                {
+                    ElectricLocomotive car = level[i];
+                    if (car != null)
+                    {
+                        //если место не пустое
+                        //Записываем тип поезда
+                        if (car.GetType().Name == "ElectricLocomotive")
+                        {
+                            WriteToFile(i + ":ElectricLocomotive:", fs);
+                        }
+                        if (car.GetType().Name == "Monorail")
+                        {
+                            WriteToFile(i + ":Monorail:", fs);
+                        }
+                        //Записываемые параметры
+                        WriteToFile(car + Environment.NewLine, fs);
+                    }
+                }
+            }
+        }
+        catch(Exception ex) {
+
+        }
     }
 }

@@ -69,7 +69,29 @@ public class Monorail extends ElectricLocomotive{
         __TopStabilizer = topStabilizer;
         __MaxTonnage = maxTonnage;
     }    
-    
+
+    public Monorail(String info)
+    {
+        super(info);
+
+        String[] strs = info.split(";");
+
+        if (strs.length == 8)
+        {
+            __MaxSpeed = Integer.parseInt(strs[0]);
+            __Weight = Integer.parseInt(strs[1]);
+
+            __MainColor = new Color(Integer.parseInt(strs[2]));
+            __AddColor = new Color(Integer.parseInt(strs[3]));
+
+            __MagneticCushion = Boolean.parseBoolean(strs[4]);
+            __BackSpoiler = Boolean.parseBoolean(strs[5]);
+            __TopStabilizer = Boolean.parseBoolean(strs[6]);
+
+            __MaxTonnage = Integer.parseInt(strs[7]);
+        }
+    }
+
     @Override
     public void Draw(Graphics g) {
     	super.Draw(g);
@@ -96,5 +118,10 @@ public class Monorail extends ElectricLocomotive{
         }
     }
 
-
+    @Override
+    public String toString()
+    {
+        return super.toString() + ';' + __AddColor.getRGB() + ';' + __MagneticCushion + ';'
+                + __BackSpoiler + ';' + __TopStabilizer + ';' + __MaxTonnage;
+    }
 }

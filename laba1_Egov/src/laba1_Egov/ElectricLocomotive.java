@@ -14,6 +14,17 @@ public class ElectricLocomotive extends Locomotive{
         __Weight = weight;
         __MainColor = mainColor;
     }
+
+    public ElectricLocomotive(String info)
+    {
+        String[] strs = info.split(";");
+        if (strs.length == 3)
+        {
+            __MaxSpeed = Integer.parseInt(strs[0]);
+            __Weight = Integer.parseInt(strs[1]);
+            __MainColor = new Color(Integer.parseInt(strs[2]));
+        }
+    }
     
 	@Override
 	public void Draw(Graphics g) {        
@@ -69,5 +80,11 @@ public class ElectricLocomotive extends Locomotive{
                 break;
         }		
 	}
+
+	@Override
+	public String toString()
+    {
+        return __MaxSpeed + ";" + __Weight + ";" + __MainColor.getRGB();
+    }
 
 }
